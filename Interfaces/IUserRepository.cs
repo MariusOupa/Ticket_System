@@ -8,7 +8,7 @@ u
 
 namespace TicketSystem.Interfaces
 {
-    interface IUserRepository
+    public interface IUserRepository
     {
         Task<IEnumerable<User>> GetUsersAsync();
         Task<User> GetUserbyId(int id);

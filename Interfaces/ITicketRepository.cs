@@ -7,13 +7,13 @@ using TicketSystem.Models;
 
 namespace TicketSystem.Interfaces
 {
-    interface ITicketRepository
+    public interface ITicketRepository
     {
         void UpdateTicket(Tickets ticket);
 
         Task<IEnumerable<Tickets>> GetTicketsAsync();
 
-        
+        Task<Tickets> AddTicket();
 
     }
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using TicketSystem.Interfaces;
 using TicketSystem.Models;
 
 namespace TicketSystem.Controllers
@@ -13,11 +14,11 @@ namespace TicketSystem.Controllers
     [ApiController]
     public class TicketsController : ControllerBase
     {
-        private readonly DBContext _context;
+        private readonly ITicketRepository _ticketRespository;
 
-        public TicketsController(DBContext context)
+        public TicketsController(ITicketRepository ticketRepository)
         {
-            _context = context;
+            _ticketRespository = ticketRepository;
         }
 
         // GET: api/Tickets
