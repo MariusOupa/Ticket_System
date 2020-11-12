@@ -30,5 +30,7 @@ namespace TicketSystem.Repositories
                 .Include(t => t.Ticket)
                 .ToListAsync();
         }
+
+        
     }
 }

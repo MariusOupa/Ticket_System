@@ -1,8 +1,10 @@
 ﻿using Microsoft.Extensions.Primitives;
+using Microsoft.VisualStudio.Web.CodeGeneration.Templating;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TicketSystem.Dto_s;
 using TicketSystem.Models;
 
 namespace TicketSystem.Interfaces
@@ -11,9 +13,9 @@ namespace TicketSystem.Interfaces
     {
         void UpdateTicket(Tickets ticket);
 
-        Task<IEnumerable<Tickets>> GetTicketsAsync();
 
         Task<Tickets> AddTicket();
 
+       
     }
 }

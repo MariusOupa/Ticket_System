@@ -12,7 +12,6 @@ using TicketSystem.Models;
         {
 
         }
-
         public DbSet<Tickets> Tickets { get; set; }
         public DbSet<User> User { get; set; }
     }

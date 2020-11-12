@@ -16,10 +16,10 @@ namespace TicketSystem.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
-
+        private readonly ITicketRepository _ticketRepository;
         public UsersController(IUserRepository userRepository,ITicketRepository ticketRepository)
         {
-            
+            _ticketRepository = ticketRepository;
             _userRepository = userRepository;
         }
 
@@ -37,6 +37,18 @@ namespace TicketSystem.Controllers
         public async Task<ActionResult<User>> GetUser(int id)
         {
             return await _userRepository.GetUserbyId(id);
+        }
+
+        [HttpPost ("add-ticket")]
+
+        public async Task<ActionResult<TicketDto>> AddTicket(TicketDto ticketDto)
+        {
+            if()
+        }
+
+        private async Task<bool>TicketExists(string type, string description, DateTime issued)
+        {
+            return await 
         }
     }
 }
